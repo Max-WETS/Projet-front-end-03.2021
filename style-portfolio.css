@@ -1,0 +1,257 @@
+body {
+    margin: 0;
+    background-color: #090f29;
+    font-family: 'Bahnschrift', sans-serif;
+}
+
+#global-wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    position: fixed;
+    top: 0px;
+    margin-top: 0px;
+    width: 100vw;
+    background-color: #BA1717;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    opacity: 1.0;
+}
+
+#navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 2rem;
+}
+
+#navbar ul li {
+    list-style-type: none;
+    font-family: 'Bahnschrift', sans-serif;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    padding: 1px;
+}
+
+#navbar ul li a:hover {
+    color: grey;
+}
+
+#navbar ul li:nth-child(3) a:hover {
+    border: 1px solid grey;
+}
+
+#navbar ul li:nth-child(3) a {
+    border: 1px solid white;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    padding: 2px;
+}
+
+#welcome-section {
+    height: 100vh;
+    width: 100vw;
+    /* background-image: linear-gradient(to top right, #3a3d40, #1a191b); */
+    background-image: url("./img/HF3Xxg1.jpg");
+
+    /* Set a specific height */
+    min-height: 100vh; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#buffer-projects {
+    position: relative;
+    left: 0;
+    top: 40%;
+    visibility: hidden;
+}
+
+#welcome-section h1 {
+    text-align: center;
+    color: white;
+    font-size: 2.8rem;
+    font-family: 'Bahnschrift', sans-serif;
+    padding-top: 35vh;
+    margin-bottom: 0.8rem;
+}
+
+#welcome-section h1+p {
+    text-align: center;
+    font-family: 'Bahnschrift', sans-serif;
+    margin-top: 0;
+    font-style: italic;
+    font-size: 1.6rem;
+    font-weight: lighter;
+    color: #BA1717;
+}
+
+#projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 70px;
+    padding-right: 70px; 
+    /*opacity: 0.2; */
+}
+
+#preview-cv {
+    opacity: 1.0;
+}
+
+#mask {
+    position: absolute;
+    width: 70%;
+    height: 72%;
+    opacity: 0.2;
+}
+
+#button {
+    visibility: hidden;
+    position: absolute;
+    left: 44%;
+    top: 150%;
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+    letter-spacing: 2px;;
+}
+
+#button:hover {
+    border: 1px solid grey;
+    color: grey;
+    cursor: pointer;
+}
+
+.project-tile {
+    height: 460px;
+    width: 460px;
+    background-color: #303841;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.project-tile a p {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+    
+}
+
+img {
+    
+    height: 380px;
+    width: 400px;
+}
+
+#projects {
+    width: 100vw;
+    height: 92vh;
+    background-color: #090f29;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#projects h1 {
+    text-align: center;
+    color: white;
+    font-size: 2.0rem;
+    font-family: 'Bahnschrift', sans-serif;
+    margin-top: 0;
+    padding-top: 1.5rem;
+    text-decoration:underline;
+}
+
+@media (max-width: 800px) {
+    .project-tile, .project-tile:nth-child(2) {
+        flex: 50%;
+    }
+
+    #contact ul {
+        flex-wrap: wrap;
+    }    
+}
+
+#contact {
+    height: 35vh;
+    width: 100vw;
+    border-bottom: 4px solid #BA1717;
+}
+
+#contact h1, p {
+    text-align: center;
+    color: white;
+}
+
+#contact h1 {
+    font-size: 2.5rem;
+    margin-top: 5rem;
+    margin-bottom: 0;
+}
+
+#contact p {
+    font-weight: lighter;
+    font-style: italic;
+    margin-top: 0.4rem;
+}
+
+#contact ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding-left: 35vw;
+    padding-right: 35vw;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+#contact ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+}
+
+footer {
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    padding-top: 2rem;
+}
+
+/* jeu et canvas */
+#divJeu {
+    display: none;
+    height: 700px;
+    width: 900px;
+    background-color: #1a191b;
+    color: white;
+    opacity: 0.0;
+    position: absolute;
+    left: 22vw;
+    top: 97vh;
+    z-index: 2;
+}
+
+#canvas1 {
+    background: url('../JEU/assets/SpaceShooterRedux/Backgrounds/black.png');
+    object-fit: contain;
+    height: 700px;
+    width: 900px;
+}
